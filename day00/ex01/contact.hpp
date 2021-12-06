@@ -1,5 +1,5 @@
-#ifndef EX01_HPP
-#define EX01_HPP
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
 
 #include <iostream>
 
@@ -11,7 +11,6 @@ class Contact
         std::string _nickname;
         std::string _phone_number;
         std::string _darkest_secret;
-        // Contact     _Contact[8];
     public:
         Contact() {}
         ~Contact() {}
@@ -25,6 +24,18 @@ class Contact
         std::string get_phone_number(void) const;
         void set_darkest_secret(void);
         std::string get_darkest_secret(void) const;
+};
+
+class Phonebook
+{
+	private:
+		Contact _contact[8];
+	public:
+		Phonebook() {}
+		~Phonebook() {}
+		int		i;
+		void	add_contact(void);
+		void	search_contact(void) const;
 };
 
 #endif
