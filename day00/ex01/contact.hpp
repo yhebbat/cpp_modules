@@ -33,7 +33,6 @@ class Phonebook
 	public:
 		Phonebook() {}
 		~Phonebook() {}
-		int		i;
 		void	add_contact(void);
 		void	search_contact(void) const;
 };
