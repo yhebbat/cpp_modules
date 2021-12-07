@@ -1,5 +1,5 @@
 #.PHONY: all bonus clean fclean re
-NAME = contact
+NAME = phonebook
 
 SRC = contact.cpp get.cpp set.cpp add_search.cpp
 #SRC_BONUS =	checker.c get_next_line.c get_next_line_utils.c pile.c \

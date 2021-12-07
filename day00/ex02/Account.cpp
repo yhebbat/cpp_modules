@@ -39,7 +39,7 @@ void Account::_displayTimestamp(void)
 {
 	char	buffer[256];
 	std::time_t t = std::time(nullptr);
- 	
+
 	std::strftime(buffer, sizeof(buffer), "[%Y%m%d_%H%M%S] ", std::localtime(&t));
 	std::cout << buffer;
 

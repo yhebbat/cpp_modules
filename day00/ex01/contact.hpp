@@ -2,6 +2,9 @@
 #define CONTACT_HPP
 
 #include <iostream>
+#include <iomanip>
+#include <string>
+
 
 class Contact
 {
@@ -24,15 +27,19 @@ class Contact
         std::string get_phone_number(void) const;
         void set_darkest_secret(void);
         std::string get_darkest_secret(void) const;
+        std::string    print_table(int k) const;
 };
 
 class Phonebook
 {
 	private:
 		Contact _contact[8];
+        static int _index;
 	public:
 		Phonebook() {}
 		~Phonebook() {}
+        int    get_index() const;
+        void     inc_index(void);
 		void	add_contact(void);
 		void	search_contact(void) const;
 };
