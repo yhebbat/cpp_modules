@@ -1,5 +1,5 @@
-#ifndef CPP_HPP
-#define CPP_HPP
+#ifndef MEGAPHONE_HPP
+#define MEGAPHONE_HPP
 
 #include <iostream>
 
