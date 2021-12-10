@@ -1,17 +1,23 @@
 #include "HumanB.hpp"
 
-HumanB::HumanB(void)
+HumanB::HumanB(std::string test): _name(test)
 {
+    //this->_name = test;
 }
 
-HumanB::HumanB(std::string test)
+std::string	HumanB::getName(void) const
 {
-    this->_name = test;
+	return (this->_name);
 }
 
-void HumanB::setWeapon(Weapon weapon)
+void		HumanB::setName(std::string name)
 {
-    this->_weapon = weapon;
+	this->_name = name;
+}
+
+void HumanB::setWeapon(Weapon &weapon)
+{
+    this->_weapon = &weapon;
 }
 
 HumanB::~HumanB()
@@ -20,5 +26,5 @@ HumanB::~HumanB()
 
 void HumanB::attack()
 {
-    std::cout << this->_name << " attacks with his" << this->_weapon.getType() << std::endl;
+    std::cout << this->_name << " attacks with his" << this->_weapon->getType() << std::endl;
 }
