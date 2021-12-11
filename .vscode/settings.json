@@ -61,6 +61,7 @@
         "type_traits": "cpp",
         "typeinfo": "cpp",
         "utility": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "filesystem": "cpp"
     }
 }

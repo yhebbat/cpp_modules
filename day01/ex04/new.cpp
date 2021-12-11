@@ -4,7 +4,7 @@
 
 #define string std::string
 
-void replace(string &filename, string &s1, string &s2)
+void replace(string filename, string s1, string s2)
 {
 	string		buff;
 	size_t		start;
@@ -45,11 +45,14 @@ void replace(string &filename, string &s1, string &s2)
 	fout.close();
 }
 
-int main(int ac, char **av)
+int mean(int ac, char **av)
 {
     string			s1;
     string			s2;
     string			filename;
+	string &a=filename;
+	string &b=s1;
+	string &c=s2;
 
     if (ac != 4)
     {
@@ -64,5 +67,6 @@ int main(int ac, char **av)
         std::cout << "Error: empty string" << std::endl;
         return (EXIT_FAILURE);
     }
-    replace(filename, s1, s2);
+    replace(a, b, c);
 }
+
