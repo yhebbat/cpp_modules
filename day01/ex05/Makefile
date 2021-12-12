@@ -1,5 +1,5 @@
 #.PHONY: all bonus clean fclean re
-NAME = main
+NAME = Karen
 
 SRC = Karen.cpp main.cpp
 
