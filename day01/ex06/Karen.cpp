@@ -34,25 +34,26 @@ void    Karen::error(void)
 
 void    Karen::complain(std::string level)
 {
-	int r = level[0];
+	int r = 0;
+    for (size_t i = 0; i < level.length(); i++)
+        r += level[i];
 	void (Karen::*fct[])(void) = 
 	{
 		&Karen::debug, &Karen::info, &Karen::warning, &Karen::error
 	};
-
 	switch (r)
 	{
-		case ('D'):
+		case (359):
 			(this->*fct[0])();//this->debug();
-		case ('I'):
-			(this->*fct[3])();//this->info();
-		case ('W'):
+		case (300):
+			(this->*fct[1])();//this->info();
+		case (534):
 			(this->*fct[2])();//this->warning();
-		case ('E'):
-			(this->*fct[1])();//this->error();
+		case (394):
+			(this->*fct[3])();//this->error();
             break;
         default:
-            std::cout << "error" << std::endl;
+            std::cout << "Error: word not found" << std::endl;
 	}
 }
 
