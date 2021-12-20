@@ -12,13 +12,13 @@ class Fixed
     public:
         Fixed(void); //1
         Fixed(Fixed const & src); //2
+        Fixed& operator=(Fixed const & rhs);//3
         Fixed(const int val);//new
         Fixed(const float val);//new
+        bool operator==(Fixed const& a);
+        bool operator!=(Fixed const& a);
         float toFloat(void) const;
         int toInt(void) const;
-        Fixed& operator=(Fixed const & rhs);//3 operator=
-        int getRawBits(void) const;
-        void setRawBits(int const raw);
         ~Fixed(); //4
 };
 std::ostream & operator<<( std::ostream & o, Fixed const & rhs);

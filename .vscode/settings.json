@@ -62,6 +62,9 @@
         "typeinfo": "cpp",
         "utility": "cpp",
         "iomanip": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "deque": "cpp",
+        "fstream": "cpp",
+        "stack": "cpp"
     }
 }
