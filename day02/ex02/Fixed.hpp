@@ -15,10 +15,18 @@ class Fixed
         Fixed& operator=(Fixed const & rhs);//3
         Fixed(const int val);//new
         Fixed(const float val);//new
-        bool operator==(Fixed const& a);
-        bool operator!=(Fixed const& a);
-        float toFloat(void) const;
-        int toInt(void) const;
+        bool	operator==(Fixed const& a);
+        bool	operator!=(Fixed const& a);
+        bool	operator>=(Fixed const& a);
+        bool	operator<=(Fixed const& a);
+        bool	operator<(Fixed const& a);
+        bool	operator>(Fixed const& a);
+		Fixed	operator+(Fixed const& a);
+        Fixed	operator-(Fixed const& a);
+        Fixed	operator*(Fixed const& a);
+        Fixed	operator/(Fixed const& a);
+        float	toFloat(void) const;
+        int		toInt(void) const;
         ~Fixed(); //4
 };
 std::ostream & operator<<( std::ostream & o, Fixed const & rhs);

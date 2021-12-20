@@ -76,3 +76,55 @@ bool Fixed::operator!=(Fixed const& a)
     else
         return true;
 }
+
+bool Fixed::operator>=(Fixed const& a)
+{
+    if (this->_value >= a._value)
+        return true;
+    else
+        return false;
+}
+
+bool Fixed::operator<=(Fixed const& a)
+{
+    if (this->_value <= a._value)
+        return true;
+    else
+        return false;
+}
+
+bool Fixed::operator>(Fixed const& a)
+{
+    if (this->_value > a._value)
+        return true;
+    else
+        return false;
+}
+
+bool Fixed::operator<(Fixed const& a)
+{
+    if (this->_value < a._value)
+        return true;
+    else
+        return false;
+}
+
+Fixed Fixed::operator+(Fixed const& a)
+{
+    return (this->toFloat() + a.toFloat());
+}
+
+Fixed Fixed::operator-(Fixed const& a)
+{
+    return (this->toFloat() - a.toFloat());
+}
+
+Fixed Fixed::operator*(Fixed const& a)
+{
+    return (this->toFloat() * a.toFloat());
+}
+
+Fixed Fixed::operator/(Fixed const& a)
+{
+    return (this->toFloat() / a.toFloat());
+}
