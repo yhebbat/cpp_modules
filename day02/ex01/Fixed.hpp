@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <cmath>
 class Fixed
 {
     private:
@@ -11,10 +12,10 @@ class Fixed
     public:
         Fixed(void); //1
         Fixed(Fixed const & src); //2
-        // Fixed(const int val);//new
-        // Fixed(const float val);//new
-        // float toFloat(void) const;
-        // int toInt(void) const;
+        Fixed(const int val);//new
+        Fixed(const float val);//new
+        float toFloat(void) const;
+        int toInt(void) const;
         Fixed& operator=(Fixed const & rhs);//3 operator=
         int getRawBits(void) const;
         void setRawBits(int const raw);
