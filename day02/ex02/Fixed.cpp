@@ -156,3 +156,8 @@ Fixed Fixed::operator--(int)
    --*this;
    return tmp;
 }
+
+Fixed Fixed::max(Fixed const& a, Fixed const& b)
+{
+    if (a >)
+}
