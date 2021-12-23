@@ -128,3 +128,31 @@ Fixed Fixed::operator/(Fixed const& a)
 {
     return (this->toFloat() / a.toFloat());
 }
+
+/*-----------------TO TEST---------------*/
+
+Fixed& Fixed::operator++(void)
+{
+   this->_value++;
+   return *this;
+}
+
+Fixed Fixed::operator++(int)
+{
+    Fixed tmp = *this;
+   ++*this;
+   return tmp;
+}
+
+Fixed& Fixed::operator--(void)
+{
+   this->_value--;
+   return *this;
+}
+
+Fixed Fixed::operator--(int)
+{
+    Fixed tmp = *this;
+   --*this;
+   return tmp;
+}

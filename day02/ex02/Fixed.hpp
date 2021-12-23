@@ -25,6 +25,10 @@ class Fixed
         Fixed	operator-(Fixed const& a);
         Fixed	operator*(Fixed const& a);
         Fixed	operator/(Fixed const& a);
+		Fixed&	operator++(void);
+		Fixed	operator++(int);
+        Fixed&	operator--(void);
+		Fixed	operator--(int);
         float	toFloat(void) const;
         int		toInt(void) const;
         ~Fixed(); //4

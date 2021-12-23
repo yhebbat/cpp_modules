@@ -22,7 +22,10 @@ void	Phonebook::add_contact(void)
 		this->_contact[Phonebook::get_index()].set_nickname();
 		this->_contact[Phonebook::get_index()].set_phone_number();
 		this->_contact[Phonebook::get_index()].set_darkest_secret();
-		Phonebook::inc_index();
+		if (!(this->_contact[Phonebook::get_index()].get_firstname().empty() && this->_contact[Phonebook::get_index()].get_last_name().empty()
+			&& this->_contact[Phonebook::get_index()].get_nickname().empty() && this->_contact[Phonebook::get_index()].get_phone_number().empty()
+			&& this->_contact[Phonebook::get_index()].get_darkest_secret().empty()))
+			Phonebook::inc_index();
 	}
 	else
 		std::cout << "You have already added 8 contact" << std::endl;
