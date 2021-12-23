@@ -4,25 +4,25 @@
 
 Fixed::Fixed(void):_value(0)
 {
-    std::cout << "default constructor called" << std::endl;
+    // std::cout << "default constructor called" << std::endl;
 }
 
 Fixed::Fixed(Fixed const & src)
 {
-    std::cout << "copy constructor called"<< std::endl;
+    // std::cout << "copy constructor called"<< std::endl;
     if (this != &src)
         this->_value = src._value;
 }
 
 Fixed::Fixed(const int val)
 {
-	std::cout << "Int constructor called"<< std::endl;
+	// std::cout << "Int constructor called"<< std::endl;
     this->_value = (val<<Fixed::bits);
 }
 
 Fixed::Fixed( float const val)
 {
-	std::cout << "Float constructor called"<< std::endl;
+	// std::cout << "Float constructor called"<< std::endl;
     this->_value = roundf(val * (1<<Fixed::bits));
 }
 
@@ -30,7 +30,7 @@ Fixed::Fixed( float const val)
 
 Fixed::~Fixed()
 {
-    std::cout << "destructor called" << std::endl;
+    // std::cout << "destructor called" << std::endl;
 }
 
 /**------------CONVERTION-------------**/
@@ -49,7 +49,7 @@ int Fixed::toInt(void) const
 
 Fixed& Fixed::operator=(Fixed const & rhs)
 {
-    std::cout << "assignment operator called"<< std::endl;
+    // std::cout << "assignment operator called"<< std::endl;
     if (this != &rhs)
         this->_value = rhs._value;
     return (*this);
@@ -159,5 +159,16 @@ Fixed Fixed::operator--(int)
 
 Fixed Fixed::max(Fixed const& a, Fixed const& b)
 {
-    if (a >)
+    if (a._value > b._value)
+        return (a);
+    else
+        return (b);
+}
+
+Fixed Fixed::min(Fixed const& a, Fixed const& b)
+{
+    if (a._value > b._value)
+        return (b);
+    else
+        return (a);
 }
