@@ -17,7 +17,8 @@ void replace(string &filename, string &s1, string &s2)
 		std::cout << "Error: file not found" << std::endl;
 		return ;
 	}
-	std::ofstream	fout("new.cpp");
+	
+	std::ofstream	fout(filename.append(".replace"));
 	if (!fout)
 	{
 		std::cout << "Error: file not found" << std::endl;
