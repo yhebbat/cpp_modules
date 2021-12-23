@@ -12,7 +12,4 @@ int main()
     meta->makeSound();
     const   WrongAnimal *l = new WrongCat();
     l->makeSound();
-    // delete j;
-    // delete i;
-    // delete l;
 }

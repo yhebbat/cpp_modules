@@ -26,11 +26,6 @@ std::string Animal::getType() const
     return (this->type_);
 }
 
-void    Animal::makeSound() const
-{
-    std::cout << "every Animal have specific sound" << std::endl; 
-}
-
 Animal & Animal::operator=(Animal const & rhs)
 {
 	if (this != &rhs)
