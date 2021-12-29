@@ -10,19 +10,19 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
     return("grade is too Low");
 }
 
-Bureaucrat::GradeTooHighException::GradeTooHighException() throw()
+Bureaucrat::GradeTooHighException::GradeTooHighException() //throw()
 {
 }
 
-Bureaucrat::GradeTooHighException::~GradeTooHighException() throw()
+Bureaucrat::GradeTooHighException::~GradeTooHighException() //throw()
 {
 }
 
-Bureaucrat::GradeTooLowException::GradeTooLowException() throw()
+Bureaucrat::GradeTooLowException::GradeTooLowException() //throw()
 {
 }
 
-Bureaucrat::GradeTooLowException::~GradeTooLowException() throw()
+Bureaucrat::GradeTooLowException::~GradeTooLowException() //throw()
 {
 }
 

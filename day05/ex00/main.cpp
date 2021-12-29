@@ -1,10 +1,11 @@
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main()
 {
     Bureaucrat a("yassine", 1);
     Bureaucrat b("yassine", 149);
-
+    
     try
     {
         a.increment();

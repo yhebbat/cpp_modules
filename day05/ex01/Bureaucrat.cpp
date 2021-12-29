@@ -49,6 +49,7 @@ Bureaucrat::Bureaucrat(Bureaucrat const & src)
     if (this != &src)
         *this = src;
 }
+
 Bureaucrat & Bureaucrat::operator=(Bureaucrat const & a)
 {
     if (this != &a)
@@ -83,4 +84,12 @@ void        Bureaucrat::decrement()
         throw Bureaucrat::GradeTooLowException();
     else
         this->_grade++;
+}
+
+void	Bureaucrat::signForm(Form const & form)
+{
+    if (form.getSignGrade() > this->_grade)
+        std::cout << Bureaucrat::GetName() << " signs " << form.getName() << std::endl;
+    else
+        std::cout << Bureaucrat::GetName() << " can not be signed because " << std::endl;
 }
