@@ -8,7 +8,7 @@ Form::~Form()
 {
 }
 
-Form::Form(std::string const name, int const sign, int const exec):_name(name), _signgrade(sign), _execgrade(exec)
+Form::Form(std::string const name, std::string const target, int const signgrade, int const execgrade):_name(name), _target(target) , _signgrade(signgrade), _execgrade(execgrade)
 {
 	if (_signgrade > 150 || _execgrade > 150)
 		throw Form::GradeTooLowException();
@@ -33,6 +33,12 @@ std::string 	Form::getName() const
 {
     return(this->_name);
 }
+
+std::string 	Form::gettarget() const
+{
+    return(this->_target);
+}
+
 
 bool			Form::getSignState() const
 {

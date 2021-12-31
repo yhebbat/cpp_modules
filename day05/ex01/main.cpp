@@ -4,13 +4,13 @@
 int main(void)
 {
 	Form		form("kk", 150, 1);
-	Form		form2("simo", 1, 1);
+	Form		form2("simo", 2, 1);
 	Bureaucrat	bureaucrat("yassine", 1);
-	Bureaucrat	bureaucrat2("hebbat", 149);
+	Bureaucrat	bureaucrat2("hebbat", 3);
 
 	try
 	{
-		form2.beSigned(bureaucrat2);
+		bureaucrat2.signForm(form2);
 	}
 	catch(const std::exception& e)
 	{
@@ -19,16 +19,16 @@ int main(void)
 	
 	try
 	{
-		form1.beSigned(bureaucrat1);
+		bureaucrat.signForm(form);
 	}
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';
 	}
 	
-	// std::cout << bureaucrat1 << std::endl;
-	// std::cout << bureaucrat2 << std::endl;
-	std::cout << form1 << std::endl;
+	std::cout << bureaucrat << std::endl;
+	std::cout << bureaucrat2 << std::endl;
+	std::cout << form << std::endl;
 	std::cout << form2 << std::endl;
 	return 0;
 }
