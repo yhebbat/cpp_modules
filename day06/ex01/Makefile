@@ -1,14 +1,14 @@
 #.PHONY: all bonus clean fclean re
-NAME = Intern
+NAME = convert
 
-SRC = Bureaucrat.cpp  Form.cpp  main.cpp  PresidentialPardonForm.cpp  RobotomyRequestForm.cpp  ShrubberyCreationForm.cpp Intern.cpp
+SRC = main.cpp
 
 OBJECT = $(SRC:.cpp=.o)
 
 all : $(NAME)
 
 $(NAME):
-	@clang++ -std=c++98 -Wall -Wextra -Werror $(SRC) -o $(NAME)
+	@clang++ -Wall -Wextra -Werror $(SRC) -o $(NAME)
 	@echo "✅✅✅"
 
 clean:

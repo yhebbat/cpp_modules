@@ -5,6 +5,11 @@ Animal::Animal(void)
 	std::cout << "Animal Constructor called type is empty" << std::endl;
 }
 
+// void    Animal::makeSound() const
+// {
+//     std::cout << "every Animal have specific sound" << std::endl; 
+// }
+
 Animal::Animal(std::string type):type_(type)
 {
 	std::cout << "Animal Constructor called and type is not empty" << std::endl;
