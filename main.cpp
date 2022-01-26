@@ -1,10 +1,18 @@
-#include<iostream>
+#include <stdio.h>          
+#include <stdlib.h>
+#include <time.h>
 
-int main()
-{
-	float i = 42.33;
-	void *r = &i;
-	int *k = reinterpret_cast<int*>(r);
+int main() {
+    
+    printf( "%d\n", rand() );
+    printf( "%d\n", rand() );
+    printf( "%d\n", rand() );
 
-	std::cout << *k << "\n";
+    srand( time( NULL ) );
+    
+    printf( "%d\n", rand() );
+    printf( "%d\n", rand() );
+    printf( "%d\n", rand() );    
+
+    return EXIT_SUCCESS;
 }
