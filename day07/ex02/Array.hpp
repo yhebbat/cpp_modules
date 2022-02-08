@@ -53,7 +53,7 @@ class Array
                 }
             }
         }
-        
+
         T &       operator[](unsigned int n)
         {
             if (n > this->_size)
@@ -67,7 +67,7 @@ class Array
                 throw OutofrangeException();
             return (this->_array[n]);
         }
-        
+
         unsigned int size(void) const
         {
             return (this->_size);
