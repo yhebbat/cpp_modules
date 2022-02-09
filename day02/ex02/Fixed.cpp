@@ -165,7 +165,23 @@ Fixed Fixed::max(Fixed const& a, Fixed const& b)
         return (b);
 }
 
+Fixed & Fixed::max(Fixed & a, Fixed & b)
+{
+    if (a._value > b._value)
+        return (a);
+    else
+        return (b);
+}
+
 Fixed Fixed::min(Fixed const& a, Fixed const& b)
+{
+    if (a._value > b._value)
+        return (b);
+    else
+        return (a);
+}
+
+Fixed & Fixed::min(Fixed & a, Fixed & b)
 {
     if (a._value > b._value)
         return (b);
