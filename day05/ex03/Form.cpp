@@ -73,9 +73,12 @@ Form&			Form::beSigned(Bureaucrat & bureau)
 
 std::ostream & operator<<( std::ostream & o, Form const & rhs)
 {
-    if (rhs.getSignState() == true)
-        o << rhs.getName() << " exec grade: " << rhs.getExecutionGrade() << " signe grade: " << rhs.getSignGrade() << " signed";
-    else
-        o << rhs.getName() << " exec grade: " << rhs.getExecutionGrade() << " signe grade: " << rhs.getSignGrade() << " not signed";
+	if (rhs.gettarget().compare("nada"))
+	{
+		if (rhs.getSignState() == true)
+			o << rhs.getName() << " exec grade: " << rhs.getExecutionGrade() << " signe grade: " << rhs.getSignGrade() << " signed";
+		else
+			o << rhs.getName() << " exec grade: " << rhs.getExecutionGrade() << " signe grade: " << rhs.getSignGrade() << " not signed";
+	}
     return o;
 }

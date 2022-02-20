@@ -88,11 +88,14 @@ void        Bureaucrat::decrement()
 
 void	Bureaucrat::signForm(Form & form)
 {
-    if (form.getSignGrade() >= this->_grade)
-        std::cout << Bureaucrat::GetName() << " signs " << form.getName() << std::endl;
-    else
-        std::cout << Bureaucrat::GetName() << " can not sign because ";
-    form.beSigned(*this);
+    if (form.gettarget().compare("nada"))
+    {
+        if (form.getSignGrade() >= this->_grade)
+            std::cout << Bureaucrat::GetName() << " signs " << form.getName() << std::endl;
+        else
+            std::cout << Bureaucrat::GetName() << " can not sign because ";
+        form.beSigned(*this);
+    }
 }
 
 std::ostream & operator<<( std::ostream & o, Bureaucrat const & rhs)
@@ -103,13 +106,16 @@ std::ostream & operator<<( std::ostream & o, Bureaucrat const & rhs)
 
 void	Bureaucrat::executeForm(Form const & form)
 {
-    try
+    if (form.gettarget().compare("nada"))
     {
-        form.execute(*this);
-        std::cout << this->GetName() << " executed " << form.getName() << std::endl;
-    }
-    catch(const std::exception& e)
-    {
-        std::cout << this->GetName() << " can't execute "  << e.what() << '\n';
+        try
+        {
+            form.execute(*this);
+            std::cout << this->GetName() << " executed " << form.getName() << std::endl;
+        }
+        catch(const std::exception& e)
+        {
+            std::cout << this->GetName() << " can't execute "  << e.what() << '\n';
+        }
     }
 }

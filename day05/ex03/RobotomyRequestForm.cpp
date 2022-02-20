@@ -34,10 +34,13 @@ RobotomyRequestForm &				RobotomyRequestForm::operator=( RobotomyRequestForm con
 
 std::ostream &			operator<<( std::ostream & o, RobotomyRequestForm const & i )
 {
-	if (i.getSignState())
-		o << i.getName() << " is signed";
-	else
-		o << i.getName() << " is not signed";
+	if (i.gettarget().compare("nada"))
+	{
+		if (i.getSignState())
+			o << i.getName() << " is signed";
+		else
+			o << i.getName() << " is not signed";
+	}
 	return o;
 }
 
@@ -47,16 +50,19 @@ std::ostream &			operator<<( std::ostream & o, RobotomyRequestForm const & i )
 
 void RobotomyRequestForm::execute (Bureaucrat const & executor) const
 {
-	if (executor.GetGrade() > this->getSignGrade())
-		throw Form::GradeTooLowException();
-	else if (this->getSignState() == false)
-		throw Form::NotSigned();
-	else
+	if (this->gettarget().compare("nada"))
 	{
-		if ((rand() % 100) >= 50)
-			std::cout << this->gettarget() << "a bien été robotomizée" << std::endl;
+		if (executor.GetGrade() > this->getSignGrade())
+			throw Form::GradeTooLowException();
+		else if (this->getSignState() == false)
+			throw Form::NotSigned();
 		else
-			std::cout << this->gettarget() << "n'a pas été robotomizée" << std::endl;
+		{
+			if ((rand() % 100) >= 50)
+				std::cout << this->gettarget() << " a bien été robotomizée" << std::endl;
+			else
+				std::cout << this->gettarget() << " n'a pas été robotomizée" << std::endl;
+		}
 	}
 }
 

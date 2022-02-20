@@ -75,13 +75,16 @@ Form*	Intern::ShrubberyCreation(std::string name)
 Form*	Intern::RobotomyRequest(std::string name)
 {
 	Form *l = new RobotomyRequestForm(name);
-	return(l);	
+	return(l);
 }
 
 Form*	Intern::nothing(std::string name)
 {
 	(void)name;
-	return(NULL);
+	// return(NULL);
+	std::cout << "Ce type de formulaire ne se trouve pas" << std::endl;
+	Form *l = new RobotomyRequestForm("nada");
+	return(l);
 }
 
 /*
