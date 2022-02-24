@@ -1,9 +1,12 @@
 #include "easyfind.hpp"
 #include <vector>
+#include <deque>
+#include <list>
 
 int main()
 {
-    std::vector<int> table;
+    // std::vector<int> table;
+    std::list<int> table;
     table.push_back(3);
     table.push_back(4);
     table.push_back(5);
