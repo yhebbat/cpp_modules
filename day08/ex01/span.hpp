@@ -73,12 +73,17 @@ public:
     template<typename T>
         void addNumber(T first, T last)
         {
-            if (((last - first) + _vect.max_size()) > this->_size)
+            // std::cout <<"****" << (last - first)<<"xxxxxx"<<this->_size << std::endl; 
+            if (((last - first)) > this->_size)
                 throw Containerfull();
             else
             {
-                
+                while (last - first > 0)
+                {
+                    // std::cout << *first << std::endl;
+                    addNumber(*first);
+                    first++;
+                }
             }
-                // _vect.insert(this->_vect.begin(), this->_vect.end());
         }
 };
