@@ -3,9 +3,9 @@
 
 int main()
 {
-    Bureaucrat a("yassine", 1);
     Bureaucrat b("yassine", 149);
-    
+    Bureaucrat a("yassine", 3);
+
     try
     {
         a.increment();
@@ -14,7 +14,7 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
-    
+
     try
     {
         b.decrement();
@@ -23,7 +23,6 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
-
-    std::cout << a.GetName() << " : "<< a.GetGrade() << std::endl; 
-    std::cout << b.GetName() << " : "<< b.GetGrade() << std::endl; 
+    std::cout << a;
+    std::cout << b;
 }

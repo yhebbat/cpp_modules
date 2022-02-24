@@ -73,6 +73,10 @@
         "numeric": "cpp",
         "random": "cpp",
         "numbers": "cpp",
-        "ranges": "cpp"
+        "ranges": "cpp",
+        "queue": "cpp",
+        "__tree": "cpp",
+        "map": "cpp",
+        "__cxx_version": "cpp"
     }
 }

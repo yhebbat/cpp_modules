@@ -8,7 +8,7 @@ OBJECT = $(SRC:.cpp=.o)
 all : $(NAME)
 
 $(NAME):
-	@clang++ -Wall -Wextra -Werror $(SRC) -o $(NAME)
+	@c++ -Wall -Wextra -Werror $(SRC) -o $(NAME) -std=c++98
 	@echo "✅✅✅"
 
 clean:

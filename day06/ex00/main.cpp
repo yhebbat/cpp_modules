@@ -6,7 +6,7 @@
 
 void    float_to_char(float &f)
 {
-    std::cout << "char: ";
+	std::cout << "char: ";
 	if (f < std::numeric_limits<char>::min() || f > std::numeric_limits<char>::max() || isnan(f))
 		std::cout <<  "impossible" << std::endl;
 	else

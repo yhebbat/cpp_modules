@@ -70,4 +70,15 @@ public:
             return (max_dist);
         }
     }
+    template<typename T>
+        void addNumber(T first, T last)
+        {
+            if (((last - first) + _vect.max_size()) > this->_size)
+                throw Containerfull();
+            else
+            {
+                
+            }
+                // _vect.insert(this->_vect.begin(), this->_vect.end());
+        }
 };

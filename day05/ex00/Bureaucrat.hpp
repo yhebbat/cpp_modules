@@ -26,8 +26,8 @@ class Bureaucrat
             private:
                 
             public:
-                GradeTooHighException();// throw();
-                virtual ~GradeTooHighException();// throw();
+                GradeTooHighException() throw();
+                virtual ~GradeTooHighException() throw();
                 virtual const char* what() const throw();
         };
         class GradeTooLowException : public std::exception
@@ -35,10 +35,10 @@ class Bureaucrat
             private:
                 
             public:
-                GradeTooLowException(); //throw();
-                virtual ~GradeTooLowException(); //throw();
+                GradeTooLowException() throw();
+                virtual ~GradeTooLowException() throw();
                 virtual const char* what() const throw();
         };
 };
-
+std::ostream & operator<<( std::ostream & o, Bureaucrat const & rhs);
 #endif

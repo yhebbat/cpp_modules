@@ -11,12 +11,12 @@ int main(void)
 	try
 	{
 		bureaucrat2.signForm(form2);
+		
 	}
 	catch(const std::exception& e)
 	{
 		std::cerr << e.what() << '\n';
 	}
-	
 	try
 	{
 		bureaucrat.signForm(form);

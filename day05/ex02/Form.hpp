@@ -7,7 +7,7 @@ class Bureaucrat;
 
 class Form
 {
-    private:
+    protected:
         std::string const _name;
         std::string const _target;
         int const   _signgrade;
@@ -15,7 +15,7 @@ class Form
         bool        _signed;
     public:
         // Form();
-        Form(std::string const name, std::string const target, int const signgrade, int const execgrade);
+        Form(std::string const name, std::string target, int const signgrade, int const execgrade);
         ~Form();
         Form &		operator=( Form const & rhs );
         Form( Form const & src );

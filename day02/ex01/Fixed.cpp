@@ -47,7 +47,7 @@ float Fixed::toFloat(void) const
 
 int Fixed::toInt(void) const
 {
-    //return((int)getRawBits()>>Fixed::bits);
+    //  return((int)getRawBits()>>Fixed::bits);
     return((int)this->_value>>Fixed::bits);
 }
 

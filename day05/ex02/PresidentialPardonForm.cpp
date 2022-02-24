@@ -24,7 +24,7 @@ PresidentialPardonForm &				PresidentialPardonForm::operator=( PresidentialPardo
 {
 	if ( this != &rhs )
 	{
-		this->_target = rhs.gettarget();
+		// this->_target = rhs.gettarget();
 	}
 	return *this;
 }

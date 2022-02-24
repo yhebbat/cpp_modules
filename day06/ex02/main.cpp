@@ -65,4 +65,5 @@ int main()
     identify(p);
     std::cout << "identify by reference" << std::endl;
     identify(*p);
+    delete p;
 }

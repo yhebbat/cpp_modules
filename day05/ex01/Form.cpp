@@ -61,8 +61,8 @@ Form&			Form::beSigned(Bureaucrat & bureau)
 		// bureau.signForm(*this);
 		throw Form::GradeTooLowException();
 	}
-	// bureau.signForm(*this);
-	this->_signed = 1;
+	else
+		this->_signed = 1;
 	return (*this);
 }
 

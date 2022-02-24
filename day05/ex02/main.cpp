@@ -7,8 +7,8 @@ int main(void)
 {
 	Form* shrubberyForm = new ShrubberyCreationForm("Garden");
 	Form* robotomyForm = new RobotomyRequestForm("Well");
-	Form* presidentialPardonForm = new PresidentialPardonForm("Abmoula");
-	Bureaucrat	bureaucrat1("qaid", 1);
+	Form* presidentialPardonForm = new PresidentialPardonForm("Fred");
+	Bureaucrat	bureaucrat1("le maire", 1);
 
 	try
 	{
@@ -25,10 +25,10 @@ int main(void)
 	}
 	
 	
-	// std::cout << bureaucrat1 << std::endl;
-	// std::cout << *shrubberyForm << std::endl;
-	// std::cout << *robotomyForm << std::endl;
-	// std::cout << *presidentialPardonForm << std::endl;
+	std::cout << bureaucrat1 << std::endl;
+	std::cout << *shrubberyForm << std::endl;
+	std::cout << *robotomyForm << std::endl;
+	std::cout << *presidentialPardonForm << std::endl;
 	return 0;
 }
 

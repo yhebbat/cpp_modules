@@ -7,7 +7,7 @@ class Bureaucrat;
 
 class Form
 {
-    private:
+    protected:
         std::string const _name;
         int const   _signgrade;
         int const   _execgrade;
@@ -32,7 +32,7 @@ class Form
                 virtual const char* what() const throw(){return ("grade too high!");}
         };
         class GradeTooLowException : public std::exception
-        {       
+        {
             public:
                 GradeTooLowException() throw(){}
                 virtual ~GradeTooLowException() throw(){}

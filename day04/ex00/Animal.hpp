@@ -18,7 +18,6 @@ class Animal
 		Animal(Animal const & src);
 };
 
-
 class Dog : public Animal
 {
     public:
@@ -51,7 +50,7 @@ class WrongAnimal
 		WrongAnimal & operator=(WrongAnimal const & rhs);
         std::string getType(void) const;
         void makeSound() const;
-		~WrongAnimal();
+		virtual ~WrongAnimal();
 		WrongAnimal(WrongAnimal const & src);
 };
 

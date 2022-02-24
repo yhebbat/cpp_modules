@@ -13,6 +13,7 @@ class ScavTrap : public ClapTrap
         ScavTrap& operator=(ScavTrap const &rhs);//3
         ~ScavTrap();//4
         void guardGate();
+        
 };
 
 #endif

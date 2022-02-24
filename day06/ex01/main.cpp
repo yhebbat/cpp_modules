@@ -2,7 +2,7 @@
 
 typedef struct Data
 {
-    // int i;
+    int ll;
     float r;
 }Data;
 
@@ -20,12 +20,12 @@ int main()
 {
     Data d;
 
-    // d.i = 20;
+    d.ll = 20;
     d.r = 20.33;
     uintptr_t x = serialize(&d);
     std::cout << x << std::endl;
     Data * ds = deserialize(x);
-    // std::cout << ds->i << std::endl;
+    std::cout << ds->ll << std::endl;
     std::cout << ds->r << std::endl;
 
     return (0);
