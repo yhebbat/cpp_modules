@@ -8,7 +8,7 @@ private:
     unsigned int _size;
     std::vector<int> _vect;
 public:
-    Span(): _size(0){};
+    Span():_size(0){};
     Span(unsigned int N): _size(N){};
     Span(Span const &obj): _size(obj._size), _vect(obj._vect){}
     ~Span(){};

@@ -11,6 +11,18 @@ class MyException : public std::exception
   }
 };
 
+template<typename T>
+void easyfind(std::stack<T> sta, int k)
+{
+	std::stack<int> table;
+	while (!sta.empty() && sta.top() != k)
+		sta.pop();
+	if (sta.size() == 0 || sta.empty())
+		throw MyException();
+	else
+		std::cout << "i found it" << std::endl;
+}
+
 template <typename T>
 void easyfind(T tab, int k)
 {
